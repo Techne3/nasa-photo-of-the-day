@@ -74,12 +74,14 @@
 }
 .CardBody{
   margin:2% 15%;
-  box-shadow: 10px 10px 23px 8px rgba(0,0,0,0.2);
+  box-shadow: -1px 9px 21px 0px rgba(0,0,0,0.6);
 
 }
 .innerTitle{
   font-size: 30px;
 }
 .modalButton{
-  margin: 2%;
+  margin-bottom: 2%;
+  padding: 10px 20px;
+  color:#000;
 }
