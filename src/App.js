@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
-import Card from './components/Card'
+import CardSpot from './components/Card'
+import ModalExample from './components/Modal'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
   const [data, setData] = useState([])
   const [date,setDate] = useState('2001-5-1')
 
-  useEffect(()=> {
+  useEffect((props)=> {
     // console.log('first render')
     axios
     .get(`https://api.nasa.gov/planetary/apod?api_key=sMGWmRK9MQVySW3QZONHif1KPJyhrZxswS6KyfjM&date=${date}`)
@@ -25,23 +27,29 @@ function App() {
 
   return (
     <div className="App">
-      {/* <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p> */}
-      <Card 
-      title={data.title}
-      date = {data.date} 
-      url = {data.url}
-      explanation = {data.explanation}
-      />
-       <form>
+        <form>
         <input className="in" onChange={(event) => 
           setDate(event.target.value)} type={'date'}>
           </input>
         </form>
-    </div>
-  );
+        <ModalExample
+      explanation={data.explanation}
+      />
+      <CardSpot 
+      explanation = {data.explanation}
+      date = {data.date} 
+      url = {data.url}      
+      title={data.title}
+      />
+    
+</div>
+
+  )
 }
+
+
+
+// export default ModalExample;
+
 
 export default App;

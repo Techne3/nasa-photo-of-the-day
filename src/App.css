@@ -35,19 +35,24 @@
 .photo-img{
   height:500px;
   width:800px;
+  
   /* border:4px solid #fff; */
   box-shadow: 10px 10px 23px 8px rgba(0,0,0,0.75);
+}
+.photo-img:hover{
+  scale:2.3;
 }
 
 .header{
   font-size: 60px;
   color:#fff;
+
  
 }
 .nasa{
   color:red;
 }
-.info{
+/* .info{
   color:#000;
   margin:2% 6%;
   line-height: 1.4;
@@ -55,8 +60,26 @@
   background-color:white;
   opacity: .5;
   padding:3% 4%;
-}
+  box-shadow: 10px 10px 23px 8px rgba(0,0,0,0.75);
+} */
 .in{
   font-size: 20px;
-  margin-bottom: 20%;
+  margin-top:5%;
+}
+.TitleCard{
+  color:#000;
+  font-size: 44px;
+  margin-top:20px;
+
+}
+.CardBody{
+  margin:2% 15%;
+  box-shadow: 10px 10px 23px 8px rgba(0,0,0,0.2);
+
+}
+.innerTitle{
+  font-size: 30px;
+}
+.modalButton{
+  margin: 2%;
 }
