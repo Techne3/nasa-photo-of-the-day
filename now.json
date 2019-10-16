@@ -1,12 +1,13 @@
 {
     "version": 2,
-    "name": "nasa-photo-of-the-day",
+    "name": "NASA-PHOTO-OF-THE-DAY",
     "builds": [
       {
-        "src": "nasa-photo-of-the-day/package.json",
+        "src": "NASA-PHOTO-OF-THE-DAY/package.json",
         "use": "@now/static-build",
         "config": { "distDir": "build" }
       }
     ],
-    "routes": [{ "src": "/(.*)", "dest": "nasa-photo-of-the-day/$1" }]
+    "routes": [{ "src": "/(.*)", "dest": "NASA-PHOTO-OF-THE-DAY/$1" }]
   }
+
